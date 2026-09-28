@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 .venv/
 output/
+prospects.csv
+boutiques.csv

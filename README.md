@@ -18,3 +18,15 @@ python crawl.py https://example.com https://docs.python.org/3/ -o output
 ```
 
 Each page is saved as `output/<host_path>.md`. The script exits with status 1 if any URL fails.
+
+## Boutiques à démarcher
+
+`prospects.py` liste les commerces susceptibles de vendre du miel (épiceries fines, magasins de producteurs, bio, fromageries, cavistes, offices de tourisme, épiceries de village…) à partir d'OpenStreetMap, et les enregistre dans un CSV qui s'ouvre dans Excel.
+
+```bash
+python prospects.py                          # Ariège (09)
+python prospects.py 09 31 11 66 -o boutiques.csv   # + Haute-Garonne, Aude, Pyrénées-Orientales
+python prospects.py 09 --enrich              # visite les sites web pour trouver les emails manquants
+```
+
+La recherche simple n'a besoin que de Python. `--enrich` nécessite crawl4ai (voir Setup).
